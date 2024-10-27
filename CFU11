@@ -1,0 +1,35 @@
+def function1():
+    print("Function 1: Print numbers from 10 to 70:")
+    for i in range(10, 71, 10):
+        print(i)
+
+def function2():
+    print("\nFunction 2: Print numbers from 0 to 10 in increments of 0.5:")
+    i = 0.0
+    while i <= 10.0:
+        print(f"{i:.1f}")  # Formatting to one decimal place
+        i += 0.5
+
+def function3():
+    print("\nFunction 3: 99 Bottles of Beer Song")
+    bottles = 99
+    while bottles > 0:
+        print(f"{bottles} bottles of beer on the wall, {bottles} bottles of beer.")
+        print("Take one down, pass it around, " + f"{bottles - 1} bottles of beer on the wall.\n")
+        bottles -= 1
+    print("No more bottles of beer on the wall.")
+
+def main_program():
+    print("Select function: 1, 2, or 3")
+    choice = input("Enter your choice: ")
+    
+    if choice == '1':
+        function1()
+    elif choice == '2':
+        function2()
+    elif choice == '3':
+        function3()
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
+
+main_program()
