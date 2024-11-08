@@ -1,35 +1,50 @@
-def function1():
-    print("Function 1: Print numbers from 10 to 70:")
+#10/26/24
+#1-2period
+#Brithanysanchez
+#cfu#11
+''' create a program that gives users 3 options to run 
+functions and test them out as requested.'''
+
+def print_nums():
     for i in range(10, 71, 10):
         print(i)
 
-def function2():
-    print("\nFunction 2: Print numbers from 0 to 10 in increments of 0.5:")
+def print_dec():
     i = 0.0
     while i <= 10.0:
-        print(f"{i:.1f}")  # Formatting to one decimal place
+        print(f"{i:.1f}")
         i += 0.5
 
-def function3():
-    print("\nFunction 3: 99 Bottles of Beer Song")
+def song_bottles_of_beer():
     bottles = 99
     while bottles > 0:
         print(f"{bottles} bottles of beer on the wall, {bottles} bottles of beer.")
-        print("Take one down, pass it around, " + f"{bottles - 1} bottles of beer on the wall.\n")
+        print("Take one down, pass it around,")
         bottles -= 1
-    print("No more bottles of beer on the wall.")
+        if bottles > 0:
+            print(f"{bottles} bottles of beer on the wall.\n")
+        else:
+            print("No more bottles of beer on the wall.\n")
 
-def main_program():
-    print("Select function: 1, 2, or 3")
-    choice = input("Enter your choice: ")
-    
-    if choice == '1':
-        function1()
-    elif choice == '2':
-        function2()
-    elif choice == '3':
-        function3()
-    else:
-        print("Invalid choice. Please enter 1, 2, or 3.")
-
-main_program()
+def main():
+    while True:
+        print("Select an option:")
+        print("1: Print Numbers (10 to 70)")
+        print("2: Print Decimals (0 to 10)")
+        print("3: Sing 99 Bottles of Beer Song")
+        print("4: Exit")
+        
+        choice = input("Enter your choice (1-4): ")
+        
+        if choice == '1':
+            print_nums()
+        elif choice == '2':
+            print_dec()
+        elif choice == '3':
+            song_bottles_of_beer()
+        elif choice == '4':
+            print("Exit")
+            
+       
+if __name__ == "__main__":
+    main()
